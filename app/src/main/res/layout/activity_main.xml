@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity">
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+
+            android:id="@+id/editTextRetypePassword"
+            android:layout_width="289dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="5dp"
+            android:ems="10"
+            android:hint="@string/editTextRetypePassword"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline6"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editTextUsername"
+            android:layout_width="289dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="5dp"
+            android:ems="10"
+            android:hint="@string/editTextUsername"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline6"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            app:layout_constraintTop_toBottomOf="@+id/editTextPersonFullName" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextPersonFullName"
+            android:layout_width="289dp"
+            android:layout_height="52dp"
+            android:ems="10"
+            android:hint="@string/editTextFullname"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline6"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            app:layout_constraintTop_toTopOf="@+id/guideline4" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+
+            android:id="@+id/editTextEmail"
+            android:layout_width="289dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="1dp"
+            android:ems="10"
+            android:hint="@string/editTextEmail"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            app:layout_constraintBottom_toTopOf="@+id/editTextPassword"
+            app:layout_constraintEnd_toStartOf="@+id/guideline6"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            app:layout_constraintTop_toBottomOf="@+id/editTextUsername" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="289dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="5dp"
+            android:ems="10"
+            android:hint="@string/editTextPassword"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline6"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="0dp"
+            app:layout_constraintGuide_percent="0.02" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="0dp"
+            app:layout_constraintGuide_percent="0.02" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="0dp"
+            app:layout_constraintGuide_percent="0.98" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/genderTextview"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/editTextRetypePassword"
+            app:layout_constraintTop_toBottomOf="@id/editTextRetypePassword" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+            <RadioButton
+                android:id="@+id/radioBtnFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/radioBtnFemale" />
+
+            <RadioButton
+                android:id="@+id/radioBtnMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/radioBtnMale" />
+        </RadioGroup>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnRegister"
+            android:layout_width="280dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/round_corner_register"
+            android:foreground="?attr/selectableItemBackground"
+            android:minHeight="48dp"
+            android:text="@string/btnRegister"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/editTextRetypePassword"
+            app:layout_constraintStart_toStartOf="@+id/editTextRetypePassword"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+            tools:targetApi="m" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnShowinfo"
+            android:layout_width="280dp"
+            android:layout_height="48dp"
+            android:textColor="@color/white"
+            android:foreground="?attr/selectableItemBackground"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/round_corner"
+            android:minHeight="48dp"
+            android:text="@string/btnShowInfo"
+            app:layout_constraintEnd_toEndOf="@+id/btnRegister"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/btnRegister"
+            app:layout_constraintTop_toBottomOf="@+id/btnRegister"
+             />
+
+        <LinearLayout
+            android:id="@+id/infoList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="@+id/editTextRetypePassword"
+            app:layout_constraintStart_toStartOf="@+id/editTextRetypePassword"
+            app:layout_constraintTop_toBottomOf="@+id/btnShowinfo">
+
+            <androidx.cardview.widget.CardView
+                android:layout_margin="5dp"
+                android:background="@color/white"
+                android:layout_width="wrap_content"
+                android:backgroundTint="@color/white_cr"
+                android:layout_height="wrap_content"
+                >
+
+
+                <LinearLayout
+
+                    android:layout_width="289dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/linear_data_info"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvFullname"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/editTextFullname"
+                        android:textAlignment="center"
+                        android:textColor="@color/pink"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvFullnameResult"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/editTextFullname"
+                        android:textAlignment="center"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_margin="5dp"
+                android:background="@color/white"
+                android:layout_width="wrap_content"
+                android:backgroundTint="@color/white_cr"
+                android:layout_height="wrap_content"
+               >
+                <LinearLayout
+                    android:padding="5dp"
+                    android:layout_width="289dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/linear_data_info"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvUsername"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/editTextUsername"
+                        android:textAlignment="center"
+                        android:textColor="@color/pink"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvUsernameResult"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/editTextUsername"
+                        android:textAlignment="center"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_margin="5dp"
+                android:background="@color/white"
+                android:layout_width="wrap_content"
+                android:backgroundTint="@color/white_cr"
+                android:layout_height="wrap_content"
+                >
+                <LinearLayout
+                    android:padding="5dp"
+                    android:layout_width="289dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/linear_data_info"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvEmail"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/editTextEmail"
+                        android:textAlignment="center"
+                        android:textColor="@color/pink"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvUEmailResult"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/editTextEmail"
+                        android:textAlignment="center"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_margin="5dp"
+                android:background="@color/white"
+                android:layout_width="wrap_content"
+                android:backgroundTint="@color/white_cr"
+                android:layout_height="wrap_content"
+                >
+                <LinearLayout
+                    android:padding="5dp"
+                    android:layout_width="289dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/linear_data_info"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvPassword"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/editTextPassword"
+                        android:textAlignment="center"
+                        android:textColor="@color/pink"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvPasswordResult"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/editTextPassword"
+                        android:textAlignment="center"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_margin="5dp"
+                android:background="@color/white"
+                android:layout_width="wrap_content"
+                android:backgroundTint="@color/white_cr"
+                android:layout_height="wrap_content"
+                >
+                <LinearLayout
+                    android:padding="5dp"
+                    android:layout_width="289dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/linear_data_info"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvGender"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/tvGender"
+                        android:textAlignment="center"
+                        android:textColor="@color/pink"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvGenderResult"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/tvGender"
+                        android:textAlignment="center"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnHideinfo"
+            android:layout_width="280dp"
+            android:layout_height="48dp"
+            android:textColor="@color/white"
+            android:foreground="?attr/selectableItemBackground"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/round_corner_register"
+            android:minHeight="48dp"
+            android:text="@string/btnHideInfo"
+            app:layout_constraintStart_toStartOf="@id/btnRegister"
+            app:layout_constraintEnd_toEndOf="@id/btnRegister"
+            app:layout_constraintTop_toBottomOf="@+id/infoList"
+            />
+
+        <androidx.constraintlayout.widget.Group
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/infoGroup"
+            app:constraint_referenced_ids="infoList,btnHideinfo"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="393dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
